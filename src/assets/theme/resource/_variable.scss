@@ -1,0 +1,146 @@
+// Reset CSS variables
+// We will be coding all the font sizes and the color values accorind to the theme and we will have to reference this value only.
+
+$hg-base-font-size: 16px;
+$hg-base-line-height: 25px;
+
+// this is used for the calculations below as we cannot use the above base font since it has px appended to it.
+$hg-base-font-value: 16;
+
+// Responsive break points
+// These must be the starting point of the responsive screen so the min width as we are coding for
+// 300px to 480px since we are following mobile responsive screen
+$hg-mobile-end: 767px;
+$hg-mobile-mid: 660px;
+$hg-tablet-start: 768px;
+$hg-desktop-start: 1280px;
+$hg-main-tablet-end: 1279px;
+$hg-desktop-large: 1600px;
+$hg-desktop-mid: 1440px;
+$hg-desktop-end: 1920px;
+$hg-tablet-end: 480px;
+
+$hg-public-desktop-start: 1024px;
+$hg-public-tablet-start: 768px;
+
+$hg-mobile-padding: 0 15px;
+$hg-tab-desktop-padding: 0 30px;
+
+$hg-public-mobile-padding: 0 20px;
+$hg-public-tab-desktop-padding: 0 60px;
+
+$viewports: (360, 768, 1280, 1920);
+
+// Basic Font sizes
+$hg-font-8px: #{8/$hg-base-font-value}em;
+$hg-font-10px: #{10/$hg-base-font-value}em;
+$hg-font-12px: #{12/$hg-base-font-value}em;
+$hg-font-14px: #{14/$hg-base-font-value}em;
+$hg-font-16px: #{16/$hg-base-font-value}em;
+$hg-font-18px: #{18/$hg-base-font-value}em;
+$hg-font-20px: #{20/$hg-base-font-value}em;
+$hg-font-22px: #{22/$hg-base-font-value}em;
+$hg-font-24px: #{24/$hg-base-font-value}em;
+$hg-font-28px: #{28/$hg-base-font-value}em;
+$hg-font-30px: #{30/$hg-base-font-value}em;
+$hg-font-32px: #{32/$hg-base-font-value}em;
+$hg-font-34px: #{34/$hg-base-font-value}em;
+$hg-font-36px: #{36/$hg-base-font-value}em;
+$hg-font-72px: #{72/$hg-base-font-value}em;
+$hg-font-48px: #{48/$hg-base-font-value}em;
+
+$hg-rem-font-8px: #{8/$hg-base-font-value}rem;
+$hg-rem-font-10px: #{10/$hg-base-font-value}rem;
+$hg-rem-font-12px: #{12/$hg-base-font-value}rem;
+$hg-rem-font-14px: #{14/$hg-base-font-value}rem;
+$hg-rem-font-16px: #{16/$hg-base-font-value}rem;
+$hg-rem-font-18px: #{18/$hg-base-font-value}rem;
+$hg-rem-font-20px: #{20/$hg-base-font-value}rem;
+$hg-rem-font-22px: #{22/$hg-base-font-value}rem;
+$hg-rem-font-24px: #{24/$hg-base-font-value}rem;
+$hg-rem-font-28px: #{28/$hg-base-font-value}rem;
+$hg-rem-font-32px: #{32/$hg-base-font-value}rem;
+$hg-rem-font-35px: #{35/$hg-base-font-value}rem;
+$hg-rem-font-72px: #{72/$hg-base-font-value}rem;
+$hg-rem-font-48px: #{48/$hg-base-font-value}rem;
+
+//Button sizes
+$max-button-height: 48px;
+$max-button-width: 136px;
+
+
+// form value font size and title/label font size
+$hg-value-font-size-16: 16px;
+$hg-title-font-size-16: 16px;
+$hg-title-font-size-hover-14: 14px;
+$hg-field-height-64: 64px;
+$hg-field-height-error-96: 96px;
+
+// application colors
+$hg-color-comp-blue:#0563fa;
+$hg-color-very-dark-blue: #0F2583;
+$hg-color-mid-blue: #2477FB;
+$hg-color-lighter-blue: #8ce0cf;
+$hg-color-dark-blue: #174FB2;
+$hg-color-advisor-blue: #29337b;
+$hg-color-light-blue: #96D8F3;
+$hg-color-mild-blue: #e8eef4;
+$hg-blue-mid-blue-2: #2196F3;
+$hg-color-mid-white: #d9e3ec;
+$hg-color-white: #FFFFFF;
+$hg-color-mint: #8BE1CF;
+$hg-color-green: #37C57F;
+$hg-color-mid-grey: #999999;
+$hg-color-yellow: #ffc700;
+$hg-color-mid-yellow: #ffc800;
+$hg-color-pale-grey: #f3f6f9;
+$hg-color-light-grey: #b2b3b3;
+$hg-color-black: #101820;
+$hg-color-blue: #0f2682;
+$hg-color-purple-brown: #231f20;
+$hg-color-coral: #Fc5147;
+$hg-color-comp-coral:#e20f03;
+$hg-color-red: #e84c3b;
+$hg-color-light-coral: #f0554c;
+$hg-color-mild-coral: #ed5851;
+$hg-color-near-blue: #2478fa;
+$hg-color-bluish-white: #dae4ed;
+$hg-color-royal-blue: #2b7af9;
+$hg-color-fog-grey: #f2f6f9;
+$hg-color-gray: #dddddd;
+$hg-color-grey: #777676;
+$hg-color-pale-blue-grey: #ddecfd;
+$hg-color-dark-grey: #eaeef3;
+$hg-color-solitude: #e2e3e4;
+$hg-color-pattens-blue: #d9e3e7;
+$hg-color-pitch-black: #000000;
+$hg-color-very-light-grey: #d0d4e5;
+$hg-color-cloudy-grey: #dadeeb;
+$hg-blue-form: #5E9BE5;
+$hg-color-scarlet: #f02f17;
+$hg-light-pale-white-color: #edeef0;
+$hg-invalid-field-color: #ec9494;
+$hg-color-pink: #d6443c;
+$hg-color-blackish-gray: #666666;
+$hg-color-grey-mid: #aaaaaa;
+$hg-color-pale-white : #f4f4f4;
+$hg-pill-box-shadow : #071547;
+$hg-pill-initials : #66bdff;
+$hg-color-grey-light: #e2e2e2;
+$hg-color-grey-lighter: #e4e4e4;
+$hg-color-hover-grey: #cfcfcf;
+$hg-color-icon-grey: #aab9c7;
+$hg-color-nobel: #989898;
+$hg-pill-box-shadow-light: #22262f;
+$hg-color-disable-grey: #f6f6f6;
+$hg-color-dark-comp-grey:#5D7A92;
+$hg-color-red-dark:#be0900;
+$hg-color-red-light:#e1190f;
+$hg-color-mid-green:#24d695;
+$hg-color-dark-green:#13ab74;
+$hg-color-gray-very-light: #dbdbdb;
+$hg-color-reorder-blue: #0275d8;
+
+
+$app-basic-color: #565672;
+$app-font-family: GTWalsheim, "Helvetica Neue", sans-serif;

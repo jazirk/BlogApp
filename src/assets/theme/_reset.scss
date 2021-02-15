@@ -1,0 +1,86 @@
+@import "resource/variable";
+@import "resource/mixins";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  body {
+    @include box-model(100vw, 100vw, 100%, 100vh !important, 100%, 100%, 0, 0 auto, none);
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    background-color: $hg-color-white;
+    font-size: $hg-base-font-size;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+    input::placeholder {
+      opacity: 1;
+    }
+    img, i {
+      user-select: none;
+    }
+
+    router-outlet {
+      display: none !important;
+    }
+
+    table {
+      border-spacing: 0;
+      margin: 0;
+
+      th {
+        text-align: left;
+      }
+    }
+
+    @include scroll-bar();
+
+    label, p, ul, li, div, h1, h2, h3, h4, h5, h6 {
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    input {
+      font-family: $app-font-family;
+      &::-webkit-input-placeholder {
+        font-family: $app-font-family
+      }
+
+      &::-webkit-contacts-auto-fill-button {
+        visibility: hidden;
+        display: none !important;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .mat-table {
+      font-family: $app-font-family;
+    }
+    .mat-header-cell {
+      color: white;
+    }
+
+    .mat-row:hover {
+     color: white !important;
+    }
+
+    .mat-form-field-infix {
+      width: 250px;
+    }
+  }
+}

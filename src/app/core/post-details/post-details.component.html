@@ -1,0 +1,24 @@
+<section>
+  <app-post-card [post]="post"><hr>
+    <div class="post__comments" (click)="loadComments()">Comments</div>
+    <div (click)="deletePost()" class="post__delete">
+      <img [src]="'../../assets/images/delete.svg'">
+    </div>
+  </app-post-card>
+  <ng-container *ngIf="!isLoading else loading">
+  <ul *ngIf="displayComments && comments.length">
+    <li *ngFor="let comment of comments">
+      <div class="post__comment">
+      <img [src]="'../../assets/images/man.svg'">
+        <div class="post__comment__body">
+          <div class="post__comment__body-name">{{comment?.name}}</div>
+          <div class="post__comment__body-body">{{comment?.body}}</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  </ng-container>
+    <ng-template #loading>
+      <app-loader></app-loader>
+    </ng-template>
+</section>

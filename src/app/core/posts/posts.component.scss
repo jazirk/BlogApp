@@ -1,0 +1,16 @@
+@import "src/assets/theme/resource/mixins";
+
+:host {
+  height: 100%;
+  padding: 10px;
+}
+
+section {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: auto;
+  @include scroll-bar();
+}

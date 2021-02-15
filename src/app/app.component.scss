@@ -1,0 +1,13 @@
+@import "src/assets/theme/resource/variable";
+section {
+  height: 100%;
+  overflow-y: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin: 1em 3em;
+  color: $app-basic-color;
+}

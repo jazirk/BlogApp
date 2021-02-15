@@ -1,0 +1,10 @@
+<mat-form-field>
+  <mat-label>Search by Title</mat-label>
+  <input class="mat-input" [(ngModel)]="filteredWord" matInput (keyup)="search($event)"#input>
+</mat-form-field>
+
+<section>
+  <ng-container *ngIf="posts?.length">
+  <app-post-card (click)="postDetails(post)" *ngFor="let post of posts" [post]="post"></app-post-card>
+  </ng-container>
+</section>

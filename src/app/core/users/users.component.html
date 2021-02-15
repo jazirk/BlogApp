@@ -1,0 +1,4 @@
+<section class="user__container">
+  <app-user-list [dataSource]="dataSource" [dataColumns]="displayedColumns"
+                 (applyFilter)="applyFilter($event)" [isLoading] ="isLoading" (rowClickEmitter)="getPostDetails($event)"></app-user-list>
+</section>
